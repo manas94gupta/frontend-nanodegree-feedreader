@@ -55,6 +55,7 @@ $(function() {
     /* Test suite named "The menu" */
     describe('The Menu', function() {
         var menu = $('body');
+        // Button to open/close menu
         var menuBtn = $('.menu-icon-link');
         /* Test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
@@ -94,6 +95,7 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
         it('should have atleast a single entry after loading', function(done) {
+            // Entry element within the feed container
             var feedEntries = $('.feed .entry');
             expect(feedEntries.length).toBeGreaterThan(0);
             done();
@@ -107,8 +109,10 @@ $(function() {
         var firstFeed;
 
         beforeEach(function(done) {
+            // Load first feed
             loadFeed(0, function() {
                 firstFeed = feed.html();
+                // Load a different feed
                 loadFeed(1, done);
             });
         });
