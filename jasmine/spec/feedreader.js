@@ -74,11 +74,11 @@ $(function() {
          it('should change visibility when menu icon is clicked', function() {
              // Open Menu
              menuBtn.trigger('click');
-             expect(menu.hasClass('menu-hidden')).toBe(false);
+             expect(menu.hasClass('menu-hidden')).toBeFalsy();
 
              // Close Menu
              menuBtn.trigger('click');
-             expect(menu.hasClass('menu-hidden')).toBe(true);
+             expect(menu.hasClass('menu-hidden')).toBeTruthy();
          });
     });
 
